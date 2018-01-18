@@ -1,0 +1,8 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute %>
+</div>
+<div class="field-unit__field">
+  <%= image_tag field.src, style: "max-width: 300px; width: 100%" %>
+  <%= f.file_field field.attribute %>
+  <%= f.hidden_field "#{field.attribute}_cache" %>
+</div>

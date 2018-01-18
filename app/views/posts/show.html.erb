@@ -1,0 +1,15 @@
+<div class="full-width-blog-header">
+  <h1 class="blog-title">
+    <%= @post.title %>
+  </h1>
+  <p class="blog-subtext">
+    <%= "#{@post.published_at_string} - #{@post.author}" %>
+  </p>
+</div>
+
+<div class="font-regular blog-content">
+  <%= image_tag(@post.image, class: "main-image") %>
+  <%= markdown_content(@post) %>
+
+  <p class="about-signature">xoxo, <%=image_tag("signature.png", class: "signature-image") %></p>
+</div>

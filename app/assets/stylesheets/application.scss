@@ -1,0 +1,113 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ $coral: #fc614b;
+ $warm-grey: #7a7a7a;
+ $white: #eaeaea;
+ $font-regular: "AvenirNext-Regular";
+ $font-ultralight: "AvenirNext-UltraLight";
+ $font-bold: "AvenirNext-DemiBold";
+
+.font-regular {
+  font-family: $font-regular;
+  color: #4e4e4e;
+}
+
+.font-ultralight {
+  font-family: $font-ultralight;
+}
+
+.font-bold {
+  font-family: $font-bold;
+}
+
+.color-coral {
+  color: $coral;
+}
+
+.blog-content {
+  max-width: 786px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+  text-align: left;
+
+  .main-image {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    img {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
+.full-width-blog-header {
+  height: 280px;
+  width: 100%;
+  line-height: 280px;
+  background-color: #d8d8d8;
+  text-align: center;
+
+  h1.blog-title {
+    font-family: $font-ultralight;
+    font-weight: 200;
+  	font-size: 85px;
+    color: $coral;
+    max-width: 100%;
+    margin: auto;
+    vertical-align: middle;
+    line-height: 120px;
+  	text-align: center;
+    padding-top: 60px;
+  }
+
+  p.blog-subtext {
+    font-family: $font-regular;
+  	font-size: 16px;
+  	color: #4e4e4e;
+    max-width: 100%;
+    margin: auto;
+    line-height: 10px;
+  	text-align: center;
+  }
+}
+
+p.centered {
+  text-align: center;
+}
+
+td {
+  line-height: 50px;
+}
+
+.about-signature {
+  color: $coral;
+  font-family: $font-bold;
+}
+
+.signature-image {
+  width: 20% !important;
+}
