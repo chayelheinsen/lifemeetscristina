@@ -4,15 +4,4 @@
   </h1>
 </div>
 
-<div class="blog-list blog-content">
-  <div class="blog-post">
-    <div class="text-container">
-      <% @posts.each do |post| %>
-        <div class="image" style="background: url(<%= post.image %>); background-size: cover;"></div>
-        <span class="date"><%= post.published_at_string %></span>
-        <h2 class="blog-title"><%= post.title %></h2>
-        <p class="description"><%= truncated_description(post) %></p>
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= render "shared/blog_list" %>

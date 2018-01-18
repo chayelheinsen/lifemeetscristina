@@ -2,6 +2,6 @@
   <%= link_to("Featured", home_index_path, class: current_class?(home_index_path)) %>
   <%= link_to("About Me", about_index_path, class: current_class?(about_index_path)) %>
   <%= link_to(image_tag("logo.png", class: "logo"), home_index_path) %>
-  <%= link_to("Blogs", post_path(1), class: current_class?(post_path(1))) %>
+  <%= link_to("Blogs", posts_path, class: current_class?(posts_path)) %>
   <%= link_to("Subscribe", "#") %>
 </nav>

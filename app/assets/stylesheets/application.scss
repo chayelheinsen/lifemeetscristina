@@ -34,6 +34,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .font-regular {
   font-family: $font-regular;
   font-weight: $font-regular-weight;
@@ -161,7 +165,6 @@ nav {
   	  font-size: 14px;
   	  text-align: center;
       color: $coral;
-      text-decoration: none;
       width: 100px;
 
       &.active {

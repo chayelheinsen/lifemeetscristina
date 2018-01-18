@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :home, only: %i[index]
-  resources :posts, only: %i[show]
+  resources :posts, only: %i[index show]
   resources :about, only: %i[index]
 
   namespace :admin do
