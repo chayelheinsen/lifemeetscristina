@@ -14,28 +14,36 @@
  *= require_self
  */
 
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+
 $coral: #fc614b;
 $warm-gray: #7a7a7a;
 $soft-white: #eaeaea;
 
-$font-regular: "AvenirNext-Regular";
-$font-ultralight: "AvenirNext-UltraLight";
-$font-bold: "AvenirNext-DemiBold";
+$font-regular: "AvenirNext-Regular", "Lato";
+$font-regular-weight: 300;
+$font-ultralight: "AvenirNext-UltraLight", "Lato";
+$font-ultralight-weight: 100;
+$font-bold: "AvenirNext-DemiBold", "Lato";
+$font-bold-weight: 400;
 
 $nav-height: 75px;
 $footer-height: 75px;
 
 .font-regular {
   font-family: $font-regular;
+  font-weight: $font-regular-weight;
   color: #4e4e4e;
 }
 
 .font-ultralight {
   font-family: $font-ultralight;
+  font-weight: $font-ultralight-weight;
 }
 
 .font-bold {
   font-family: $font-bold;
+  font-weight: $font-bold-weight;
 }
 
 .color-coral {
@@ -78,7 +86,7 @@ $footer-height: 75px;
 
   h1.blog-title {
     font-family: $font-ultralight;
-    font-weight: 200;
+    font-weight: $font-ultralight-weight;;
   	font-size: 85px;
     color: $coral;
     max-width: 100%;
@@ -96,6 +104,7 @@ $footer-height: 75px;
 
   p.blog-subtext {
     font-family: $font-regular;
+    font-weight: $font-regular-weight;
   	font-size: 16px;
   	color: #4e4e4e;
     max-width: 100%;
@@ -116,6 +125,7 @@ td {
 .about-signature {
   color: $coral;
   font-family: $font-bold;
+  font-weight: $font-bold-weight;
 }
 
 .signature-image {
@@ -138,6 +148,7 @@ nav {
     a {
       padding: 0 40px;
       font-family: $font-regular;
+      font-weight: $font-regular-weight;
   	  font-size: 14px;
   	  text-align: center;
       color: $coral;
@@ -146,10 +157,12 @@ nav {
 
       &.active {
         font-family: $font-bold;
+        font-weight: $font-bold-weight;
       }
 
       &:hover {
         font-family: $font-bold;
+        font-weight: $font-bold-weight;
       }
     }
   }
