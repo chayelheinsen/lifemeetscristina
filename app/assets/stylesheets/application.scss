@@ -93,7 +93,7 @@ a {
   text-align: center;
 
   &.home-image {
-    background: url("large-logo-background.jpg");
+    background: asset-data-url("large-logo-background.jpg");
     background-size: cover;
   }
 
