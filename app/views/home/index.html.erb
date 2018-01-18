@@ -9,5 +9,6 @@
     <%= image_tag(post.image) %>
     <%= post.title %>
     <%= post.published_at_string %>
+    <%= truncated_description(post) %>
   <% end %>
 </div>
