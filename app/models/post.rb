@@ -24,7 +24,7 @@ class Post < ApplicationRecord
   validates :author, presence: true
   validates :content, presence: true
 
-  scope :featured,    -> { order(impressions_count: :desc).limit(10) }
+  scope :featured,    -> { order(impressions_count: :desc).limit(9) }
   scope :sorted,      -> { order(published_at: :desc) }
   scope :published,   -> { where("published_at < ?", Time.zone.now) }
   scope :unpublished, -> { where("published_at > ?", Time.zone.now).or(where(published_at: nil)) }

@@ -30,6 +30,10 @@ $font-bold-weight: 400;
 $nav-height: 75px;
 $footer-height: 75px;
 
+body {
+  margin: 0;
+}
+
 .font-regular {
   font-family: $font-regular;
   font-weight: $font-regular-weight;
@@ -205,5 +209,54 @@ nav {
 
 .large-logo {
   width: 50%;
-  padding-top: 40px;
+  padding-top: 20px;
+}
+
+.blog-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.blog-post {
+  margin: 30px 20px;
+
+  .text-container {
+    border-color: $coral;
+    border-width: 2px;
+    border-style: solid;
+    width: 300px;
+
+    .date {
+      font-family: $font-ultralight;
+      font-weight: $font-ultralight-weight;
+    	font-size: 14px;
+    	color: $warm-gray;
+      padding-left: 10px;
+    }
+
+    .blog-title {
+      font-family: $font-bold;
+      font-weight: $font-bold-weight;
+      font-size: 18px;
+      color: $warm-gray;
+      padding-left: 10px;
+      margin: 5px 0;
+    }
+
+    .description {
+      font-family: $font-regular;
+      font-weight: $font-regular-weight;
+      font-size: 14px;
+      color: $warm-gray;
+      padding-left: 10px;
+      margin: 10px 0;
+    }
+
+    .image {
+      width: 100%;
+      height: 200px;
+    }
+  }
 }
