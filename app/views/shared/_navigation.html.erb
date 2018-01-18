@@ -1,0 +1,7 @@
+<nav class="header">
+  <%= link_to("Featured", root_path, class: current_class?(root_path)) %>
+  <%= link_to("About Me", about_index_path, class: current_class?(about_index_path)) %>
+  <%= link_to(image_tag("logo.png", class: "logo"), root_path) %>
+  <%= link_to("Blogs", post_path(1), class: current_class?(post_path(1))) %>
+  <%= link_to("Subscribe", "#", class: current_class?("")) %>
+</nav>

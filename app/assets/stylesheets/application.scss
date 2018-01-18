@@ -14,12 +14,16 @@
  *= require_self
  */
 
- $coral: #fc614b;
- $warm-grey: #7a7a7a;
- $white: #eaeaea;
- $font-regular: "AvenirNext-Regular";
- $font-ultralight: "AvenirNext-UltraLight";
- $font-bold: "AvenirNext-DemiBold";
+$coral: #fc614b;
+$warm-gray: #7a7a7a;
+$soft-white: #eaeaea;
+
+$font-regular: "AvenirNext-Regular";
+$font-ultralight: "AvenirNext-UltraLight";
+$font-bold: "AvenirNext-DemiBold";
+
+$nav-height: 100px;
+$footer-height: 75px;
 
 .font-regular {
   font-family: $font-regular;
@@ -65,10 +69,11 @@
 }
 
 .full-width-blog-header {
+  margin-top: $nav-height;
   height: 280px;
   width: 100%;
   line-height: 280px;
-  background-color: #d8d8d8;
+  background-color: $soft-white;
   text-align: center;
 
   h1.blog-title {
@@ -82,6 +87,11 @@
     line-height: 120px;
   	text-align: center;
     padding-top: 60px;
+
+    &.no-subtext {
+      padding-top: 0;
+      line-height: 280px;
+    }
   }
 
   p.blog-subtext {
@@ -110,4 +120,66 @@ td {
 
 .signature-image {
   width: 20% !important;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: $soft-white;
+  width: 100%;
+  height: $nav-height;
+  line-height: $nav-height;
+
+  &.header {
+    top: 0;
+    position: fixed;
+
+    a {
+      padding: 0 40px;
+      font-family: $font-regular;
+  	  font-size: 14px;
+  	  text-align: center;
+      color: $coral;
+      text-decoration: none;
+      width: 100px;
+
+      &.active {
+        font-family: $font-bold;
+      }
+
+      &:hover {
+        font-family: $font-bold;
+      }
+    }
+  }
+
+  &.footer {
+    height: $footer-height;
+    justify-content: flex-start;
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      padding-top: 10px;
+      padding-left: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 0 5px;
+      line-height: 80px;
+    }
+  }
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  color: $coral;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  padding-top: 10px;
 }

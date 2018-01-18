@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  root to: "about#index"
+
   resources :posts, only: %i[show]
   resources :about, only: %i[index]
 
