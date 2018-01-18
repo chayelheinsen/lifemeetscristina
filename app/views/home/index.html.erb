@@ -1,0 +1,13 @@
+<div class="full-width-blog-header home-image">
+  <h1 class="blog-title no-subtext">
+    <%= image_tag("large-logo.png", class: "large-logo") %>
+  </h1>
+</div>
+
+<div class="font-regular blog-content">
+  <% @posts.each do |post| %>
+    <%= image_tag(post.image) %>
+    <%= post.title %>
+    <%= post.published_at_string %>
+  <% end %>
+</div>

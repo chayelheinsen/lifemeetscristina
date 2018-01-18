@@ -84,6 +84,11 @@ $footer-height: 75px;
   background-color: $soft-white;
   text-align: center;
 
+  &.home-image {
+    background: url("large-logo-background.jpg");
+    background-size: cover;
+  }
+
   h1.blog-title {
     font-family: $font-ultralight;
     font-weight: $font-ultralight-weight;;
@@ -196,4 +201,9 @@ nav {
   width: 50px;
   height: 50px;
   padding-top: 10px;
+}
+
+.large-logo {
+  width: 50%;
+  padding-top: 40px;
 }

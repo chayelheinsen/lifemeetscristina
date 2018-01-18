@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
+  impressionist actions: %i[show]
+
   def index
     @posts = Post.published.sorted
     @categories = Category.sorted

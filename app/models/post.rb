@@ -16,12 +16,15 @@
 #
 
 class Post < ApplicationRecord
+  is_impressionable counter_cache: true, unique: true
+
   belongs_to :category
 
   validates :title, presence: true
   validates :author, presence: true
   validates :content, presence: true
 
+  scope :featured,    -> { order(impressions_count: :desc).limit(10) }
   scope :sorted,      -> { order(published_at: :desc) }
   scope :published,   -> { where("published_at < ?", Time.zone.now) }
   scope :unpublished, -> { where("published_at > ?", Time.zone.now).or(where(published_at: nil)) }

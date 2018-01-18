@@ -117,6 +117,8 @@ GEM
       activesupport (>= 4.2.0)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
+    impressionist (1.6.0)
+      nokogiri (~> 1)
     interactor (3.1.0)
     interactor-rails (2.1.1)
       interactor (~> 3.0)
@@ -299,6 +301,7 @@ DEPENDENCIES
   faker
   fog-aws
   forerunner
+  impressionist
   interactor-rails
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
