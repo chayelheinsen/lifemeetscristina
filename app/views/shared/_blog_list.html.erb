@@ -1,14 +1,14 @@
 <div class="blog-list blog-content">
-  <div class="blog-post">
-    <% @posts.each do |post| %>
-      <%= link_to post_path(post) do %>
-        <div class="text-container">
-          <div class="image" style="background: url(<%= post.image %>); background-size: cover;"></div>
-          <span class="date"><%= post.published_at_string %></span>
-          <h2 class="blog-title"><%= post.title %></h2>
-          <p class="description"><%= truncated_description(post) %></p>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
+  <% @posts.each do |post| %>
+    <div class="blog-post">
+        <%= link_to post_path(post) do %>
+          <div class="text-container">
+            <div class="image" style="background: url(<%= post.image %>); background-size: cover;"></div>
+            <span class="date"><%= post.published_at_string %></span>
+            <h2 class="blog-title"><%= post.title %></h2>
+            <p class="description"><%= truncated_description(post) %></p>
+          </div>
+        <% end %>
+    </div>
+  <% end %>
 </div>
