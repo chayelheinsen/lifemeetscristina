@@ -122,6 +122,8 @@ GEM
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     impressionist (1.6.0)
@@ -169,6 +171,7 @@ GEM
     momentjs-rails (2.17.1)
       railties (>= 3.1)
     multi_json (1.13.1)
+    multi_xml (0.6.0)
     netrc (0.11.0)
     nio4r (2.2.0)
     nokogiri (1.8.1)
@@ -320,6 +323,7 @@ DEPENDENCIES
   faker
   fog-aws
   forerunner
+  httparty
   impressionist
   interactor-rails
   listen (>= 3.0.5, < 3.2)

@@ -336,3 +336,22 @@ nav {
     outline-color: $coral;
   }
 }
+
+.instagram-feed {
+  max-height: 200px;
+  display: flex;
+  overflow-x: scroll;
+
+  .instagram-container {
+
+    .instagram-image {
+      max-width: 500px;
+      max-height: 190px;
+      width: auto;
+      height: auto;
+      border-width: 1px 0.5px;
+      border-style: solid;
+      border-color: $coral;
+    }
+  }
+}

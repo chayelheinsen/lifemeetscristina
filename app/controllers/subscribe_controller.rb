@@ -15,6 +15,6 @@ class SubscribeController < ApplicationController
   end
 
   def validate_email
-    redirect_to home_index_path unless subscribe_params[:email] =~ /.+@.+\..+/i
+    redirect_to home_index_path unless subscribe_params[:email].match?(/.+@.+\..+/i)
   end
 end

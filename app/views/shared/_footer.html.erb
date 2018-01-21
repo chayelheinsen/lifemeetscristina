@@ -1,3 +1,10 @@
+<div class="instagram-feed">
+  <% InstagramFeed.new.media.first(10).each do |media| %>
+    <div class="instagram-container">
+      <%= image_tag(media.url, class: "instagram-image") %>
+    </div>
+  <% end %>
+</div>
 <nav class="footer">
   <%= link_to(image_tag("logo.png", class: "logo"), root_path) %>
   <%= link_to(image_tag("instagram.png", class: "instagram-icon footer-icon"), "https://instagram.com/lifemeetscc") %>
