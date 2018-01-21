@@ -3,5 +3,37 @@
   <%= link_to("About Me", about_index_path, class: current_class?(about_index_path)) %>
   <%= link_to(image_tag("logo.png", class: "logo"), home_index_path) %>
   <%= link_to("Blogs", posts_path, class: current_class?(posts_path)) %>
-  <%= link_to("Subscribe", "#") %>
+  <%= link_to("Subscribe", "#", id: "subscribe-button") %>
 </nav>
+
+<div id="subscribe-modal">
+  <div class="content-container">
+    <div class="content">
+      <p>
+        Let's be friends! Subscribe to LifeMeetsCristina.
+      </p>
+
+      <%= form_tag(subscribe_index_path) do %>
+        <%= text_field_tag(:email, nil, placeholder: "Email", class: "rounded-input") %>
+        <%= submit_tag("Subscribe Me!", class: "subscribe-submit") %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- <script type="text/javascript">
+  var button = document.getElementById('subscribe-button');
+
+
+  button.addEventListener("click", function(event) {
+    console.log("yay!");
+    event.preventDefault();
+
+    var modal = document.getElementById('subscribe-modal');
+    modal.style.display = 'block';
+
+    modal.addEventListener("click", function(event) {
+      modal.style.display = 'none';
+    });
+  });
+</script> -->

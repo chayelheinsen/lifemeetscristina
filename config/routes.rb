@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :home, only: %i[index]
   resources :posts, only: %i[index show]
   resources :about, only: %i[index]
+  resources :subscribe, only: %i[create]
 
   namespace :admin do
     resources :categories

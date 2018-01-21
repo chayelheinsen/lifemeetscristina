@@ -265,3 +265,74 @@ nav {
     }
   }
 }
+
+#subscribe-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+
+  .content-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+      width: 800px;
+      height: 200px;
+      background-color: $soft-white;
+      text-align: center;
+
+      p {
+        margin: 15px 100px;
+        text-align: center;
+        font-family: $font-regular;
+        font-weight: $font-regular-weight;
+        font-size: 20px;
+        color: $coral;
+      }
+
+      .subscribe-submit {
+        display: block;
+	      margin: 0 auto;
+        width: 255px;
+        height: 45px;
+        border-radius: 8px;
+      	background-color: $coral;
+
+        font-family: $font-regular;
+        font-size: 20px;
+        font-weight: $font-regular-weight;
+        text-align: center;
+        color: #ffffff;
+
+        &:focus {
+          outline-color: $coral;
+        }
+      }
+    }
+  }
+}
+
+.rounded-input {
+  width: 255px;
+	height: 45px;
+	border-radius: 8px;
+	background-color: #d8d8d8;
+  margin: 15px 0;
+  font-family: $font-regular;
+  font-weight: $font-regular-weight;
+  font-size: 20px;
+
+  &:focus {
+    outline-color: $coral;
+  }
+}
