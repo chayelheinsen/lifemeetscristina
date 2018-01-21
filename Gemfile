@@ -24,6 +24,7 @@ gem "rails", "~> 5.1.4"
 gem "redcarpet"
 gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
+gem "mini_magick"
 gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
