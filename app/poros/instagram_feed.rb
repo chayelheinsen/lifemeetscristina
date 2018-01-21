@@ -4,7 +4,7 @@ class InstagramFeed
   include Enumerable
 
   CACHE_EXPIRATION = 12.hours
-  DEFAULT_USERNAME = "lifemeetscristina"
+  DEFAULT_USERNAME = "lifemeetscc"
 
   def initialize(username = DEFAULT_USERNAME)
     @username = username
