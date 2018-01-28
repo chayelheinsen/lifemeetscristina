@@ -266,6 +266,7 @@ nav {
   }
 }
 
+
 #subscribe-modal {
   display: none;
   position: fixed;
@@ -277,63 +278,45 @@ nav {
   z-index: 1000;
   height: 100%;
   width: 100%;
+  animation-name: animate_subscibe_modal;
+  animation-duration: 0.4s;
 
-  .content-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .modal-content {
+    margin: 15% auto;
+    padding: 20px;
+    height: 225px;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    text-align: center;
 
-    .content {
-      width: 800px;
-      height: 200px;
-      background-color: $soft-white;
+    p {
+      margin: 15px 100px;
       text-align: center;
+      font-family: $font-regular;
+      font-weight: $font-regular-weight;
+      font-size: 20px;
+      color: $coral;
+    }
 
-      p {
-        margin: 15px 100px;
-        text-align: center;
-        font-family: $font-regular;
-        font-weight: $font-regular-weight;
-        font-size: 20px;
-        color: $coral;
-      }
+    .subscribe-submit {
+      display: block;
+      margin: 0 auto;
+      width: 255px;
+      height: 45px;
+      border-radius: 8px;
+    	background-color: $coral;
 
-      .subscribe-submit {
-        display: block;
-	      margin: 0 auto;
-        width: 255px;
-        height: 45px;
-        border-radius: 8px;
-      	background-color: $coral;
+      font-family: $font-regular;
+      font-size: 20px;
+      font-weight: $font-regular-weight;
+      text-align: center;
+      color: #ffffff;
 
-        font-family: $font-regular;
-        font-size: 20px;
-        font-weight: $font-regular-weight;
-        text-align: center;
-        color: #ffffff;
-
-        &:focus {
-          outline-color: $coral;
-        }
+      &:hover {
+        background-color: #F77564
       }
     }
-  }
-}
-
-.rounded-input {
-  width: 255px;
-	height: 45px;
-	border-radius: 8px;
-	background-color: #d8d8d8;
-  margin: 15px 0;
-  font-family: $font-regular;
-  font-weight: $font-regular-weight;
-  font-size: 20px;
-
-  &:focus {
-    outline-color: $coral;
   }
 }
 
@@ -363,4 +346,29 @@ nav {
 
 #shopstyle-image {
   width: 150px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 10px;
+
+    &:focus {
+      text-decoration: none;
+      cursor: pointer;
+      color: #F77564;
+    }
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+      color: #F77564;
+    }
+}
+
+@keyframes animate_subscibe_modal {
+  from {opacity: 0}
+  to {opacity: 1}
 }
