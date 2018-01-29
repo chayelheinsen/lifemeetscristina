@@ -4,6 +4,9 @@
     <title><%= if content_for?(:meta_title) then yield(:meta_title) + ' | ' end %>LifeMeetsCristina</title>
     <%= csrf_meta_tags %>
 
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@lifemeetscc" />
+    <meta name="twitter:creator" content="@lifemeetscc" />
     <meta name="og:description" content="<%= yield_meta_tag(:description, '') %>" />
     <meta name="og:image" content="<%= yield_meta_tag(:image, '') %>" />
     <meta name="og:title" content="<%= yield_meta_tag(:title, '') %>" />
