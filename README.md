@@ -29,9 +29,7 @@ GitHub configured to protect `master` and `develop` from failing code.
 
 ### Deployment
 
-* Production must be manually deployed using the [Heroku toolbelt] or [web UI][deployed to Heroku].
-
-[Heroku toolbelt]: https://devcenter.heroku.com/articles/heroku-cli
+* Production must be manually deployed using the [Heroku toolbelt](https://devcenter.heroku.com/articles/heroku-cli) or website].
 
 ### Ongoing
 
