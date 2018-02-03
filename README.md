@@ -3,6 +3,10 @@
 
 ![Website screenshot](./screenshot.png)
 
+LifeMeetsCristina is a personal blog ran by Cristina Camacho.
+
+This project is built using Rails 5 and Vue.
+
 ## Development
 
 ### Setup
@@ -10,15 +14,28 @@
 1. Get the code.
 
   ```sh
-  git clone git@github.com:chayelheinsen/lifemeetscristina.git
+  $ git clone git@github.com:chayelheinsen/lifemeetscristina.git
   ```
 
 2. Set up your environment.
+
   ```sh
-  bin/setup
+  $ bin/setup
   ```
 
 3. Follow the instructions in `.env` to set up environment variables.
+
+4. Run the project!
+
+  ```sh
+  $ rails s
+  ```
+
+Note: If you want live reloading for any of the Vue portions of the app, run
+
+```sh
+$ webpack-dev-server
+```
 
 ### Continuous integration
 
@@ -29,12 +46,12 @@ GitHub configured to protect `master` and `develop` from failing code.
 
 ### Deployment
 
-* Production must be manually deployed using the [Heroku toolbelt](https://devcenter.heroku.com/articles/heroku-cli) or website].
+* Production must be manually deployed using the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) or website.
 
 ### Ongoing
 
 * Run RuboCop before committing. There's a comprehensive style guide for this project.
 
-  ```
-  rubocop
+  ```sh
+  $ rubocop
   ```
