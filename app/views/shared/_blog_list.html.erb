@@ -1,20 +1,5 @@
 <%= javascript_pack_tag 'blog-list', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_pack_tag 'blog-list', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<!-- <div class="blog-list blog-content">
-  <% @posts.each do |post| %>
-    <div class="blog-post">
-        <%= link_to post_path(post) do %>
-          <div class="text-container">
-            <div class="image" style="background: url(<%= post.image %>); background-size: cover;"></div>
-            <span class="date"><%= post.published_at_string %></span>
-            <h2 class="blog-title"><%= post.title %></h2>
-            <p class="description"><%= truncated_description(post) %></p>
-            <p></p>
-            <p class="read-more">READ MORE</p>
-          </div>
-        <% end %>
-    </div>
-  <% end %>
-</div> -->
 <% posts = ActiveModelSerializers::SerializableResource.new(@posts).to_json %>
-<%= tag.div(id: :"blog-list", class: :"blog-list blog-content", data: { posts: posts }) %>
+<%= tag.div(id: :"blog-list", class: :"blog-list blog-content", data: { posts: posts, show_search: @show_search }) %>

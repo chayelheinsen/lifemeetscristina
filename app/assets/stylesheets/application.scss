@@ -160,6 +160,7 @@ nav {
   width: 100%;
   height: $nav-height;
   line-height: $nav-height;
+  z-index: 1000;
 
   &.header {
     top: 0;
@@ -286,7 +287,6 @@ nav {
   }
 }
 
-
 #subscribe-modal {
   display: none;
   position: fixed;
@@ -391,4 +391,48 @@ nav {
 @keyframes animate_subscibe_modal {
   from {opacity: 0}
   to {opacity: 1}
+}
+
+.blog-filter {
+  padding-top: 30px;
+  position: relative;
+  width: 300px;
+
+  label {
+    position: absolute;
+    font-size: 12px;
+    color: rgba(0,0,0,.50);
+    top: 30px;
+    left: 12px;
+    z-index: -1;
+    transition: .15s all ease-in-out;
+    font-family: $font-regular;
+    font-weight: $font-regular-weight;
+  }
+
+  input {
+    padding: 4px 12px;
+    color: rgba(0,0,0,.70);
+    border: 1px solid $coral;
+    transition: .15s all ease-in-out;
+    background: white;
+    border-radius: 5px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      // transform: scale(1.05);
+
+      & + label {
+        font-size: 18px;
+        transform: translateY(-24px) translateX(-12px);
+      }
+    }
+
+    &::-webkit-input-placeholder {
+        font-size: 12px;
+        color: rgba(0,0,0,.50);
+        font-weight: 100;
+    }
+  }
 }

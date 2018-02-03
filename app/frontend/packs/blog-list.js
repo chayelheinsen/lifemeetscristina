@@ -1,8 +1,8 @@
 import Vue from 'vue/dist/vue.esm'
-// import TurbolinksAdapter from 'vue-turbolinks'
+import TurbolinksAdapter from '../vue-turbolinks.js'
 import BlogList from '../components/blog-list.vue'
 
-// Vue.use(TurbolinksAdapter)
+Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
   let element = document.querySelector('#blog-list')
@@ -11,9 +11,10 @@ document.addEventListener('turbolinks:load', () => {
     const app = new Vue({
       el: element,
       data: {
-        posts: JSON.parse(element.dataset.posts)
+        posts: JSON.parse(element.dataset.posts),
+        showSearch: !!~~element.dataset.showSearch
       },
-      template: "<BlogList :posts='posts' />",
+      template: "<BlogList :posts='posts' :showSearch='showSearch' />",
       components: { BlogList }
     })
   }
