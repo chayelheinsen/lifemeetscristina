@@ -21,7 +21,6 @@ module PostsHelper
 
       renderer = Redcarpet::Markdown.new(plain)
       content = renderer.render(Nokogiri::HTML(post.content).text)
-
       truncate(content, length: 160).html_safe
     end
   end

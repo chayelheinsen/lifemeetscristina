@@ -31,11 +31,19 @@ class Post < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  def url
+    Rails.application.routes.url_helpers.post_path(self)
+  end
+
   def published?
     published_at? && published_at < Time.zone.now
   end
 
   def published_at_string
     published_at.strftime("%B %d, %Y")
+  end
+
+  def truncated_description
+    ApplicationController.helpers.truncated_description(self)
   end
 end

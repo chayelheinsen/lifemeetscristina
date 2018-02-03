@@ -16,5 +16,5 @@
     </div>
   <% end %>
 </div> -->
-
-<%= tag.div(id: :"blog-list", class: :"blog-list blog-content", data: { posts: @posts.to_json }) %>
+<% posts = ActiveModelSerializers::SerializableResource.new(@posts).to_json %>
+<%= tag.div(id: :"blog-list", class: :"blog-list blog-content", data: { posts: posts }) %>

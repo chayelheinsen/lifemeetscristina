@@ -5,6 +5,8 @@ AllCops:
     - "**/*.haml"
     - db/migrate/*
     - '**/*.rake'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
   TargetRubyVersion: 2.5
 
 Metrics/BlockLength:

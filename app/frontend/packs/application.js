@@ -8,3 +8,6 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import "stylesheets/application.scss"
+// import Vue from 'vue/dist/vue.esm'
+// import TurbolinksAdapter from 'vue-turbolinks'
+// Vue.use(TurbolinksAdapter)

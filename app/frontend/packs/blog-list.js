@@ -1,8 +1,8 @@
-import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
-import BlogList from '../blog-list.vue'
+// import TurbolinksAdapter from 'vue-turbolinks'
+import BlogList from '../components/blog-list.vue'
 
-Vue.use(TurbolinksAdapter)
+// Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
   let element = document.querySelector('#blog-list')
