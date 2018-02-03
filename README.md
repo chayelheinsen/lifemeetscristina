@@ -1,24 +1,42 @@
-# README
+# LifeMeetsCristina
+[![Build Status](https://travis-ci.org/chayelheinsen/lifemeetscristina.svg?branch=master)](https://travis-ci.org/chayelheinsen/lifemeetscristina)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Website screenshot](./screenshot.png)
 
-Things you may want to cover:
+## Development
 
-* Ruby version
+### Setup
 
-* System dependencies
+1. Get the code.
 
-* Configuration
+  ```sh
+  git clone git@github.com:chayelheinsen/lifemeetscristina.git
+  ```
 
-* Database creation
+2. Set up your environment.
+  ```sh
+  bin/setup
+  ```
 
-* Database initialization
+3. Follow the instructions in `.env` to set up environment variables.
 
-* How to run the test suite
+### Continuous integration
 
-* Services (job queues, cache servers, search engines, etc.)
+This project is [hosted on TravisCI]. Please keep
+GitHub configured to protect `master` and `develop` from failing code.
 
-* Deployment instructions
+[Hosted on TravisCI]: https://travis-ci.org/chayelheinsen/lifemeetscristina
 
-* ...
+### Deployment
+
+* Production must be manually deployed using the [Heroku toolbelt] or [web UI][deployed to Heroku].
+
+[Heroku toolbelt]: https://devcenter.heroku.com/articles/heroku-cli
+
+### Ongoing
+
+* Run RuboCop before committing. There's a comprehensive style guide for this project.
+
+  ```
+  rubocop
+  ```
