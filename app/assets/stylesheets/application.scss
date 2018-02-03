@@ -146,6 +146,13 @@ td {
   width: 20% !important;
 }
 
+.about-me-image {
+  max-height: 300px;
+  float: left;
+  max-width: 45%;
+  margin: 0px 10px;
+}
+
 nav {
   display: flex;
   justify-content: center;
