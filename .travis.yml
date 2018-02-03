@@ -9,3 +9,5 @@ services:
   - postgresql
 addons:
   postgresql: "9.6"
+notifications:
+  email: false
