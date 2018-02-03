@@ -1,4 +1,6 @@
-<div class="blog-list blog-content">
+<%= javascript_pack_tag 'blog-list', 'data-turbolinks-track': 'reload' %>
+
+<!-- <div class="blog-list blog-content">
   <% @posts.each do |post| %>
     <div class="blog-post">
         <%= link_to post_path(post) do %>
@@ -13,4 +15,6 @@
         <% end %>
     </div>
   <% end %>
-</div>
+</div> -->
+
+<%= tag.div(id: :"blog-list", class: :"blog-list blog-content", data: { posts: @posts.to_json }) %>
