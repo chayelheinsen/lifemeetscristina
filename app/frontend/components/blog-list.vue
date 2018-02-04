@@ -19,7 +19,7 @@
 
 <script>
 import BlogItem from './blog-item.vue'
-import array from 'lodash/array'
+import { uniq } from 'lodash/array'
 
 export default {
   data: function() {
@@ -31,12 +31,13 @@ export default {
   components: { BlogItem },
   computed: {
     filteredPosts() {
-      const byTitle = this.posts.filter(post => post.title.toLowerCase().includes(this.search.toLowerCase()))
-      const byContent = this.posts.filter(post => post.content.toLowerCase().includes(this.search.toLowerCase()))
-      const byCategory = this.posts.filter(post => post.category.name.toLowerCase().includes(this.search.toLowerCase()))
+      const search = this.search.toLowerCase()
+      const title = this.posts.filter(post => post.title.toLowerCase().includes(search))
+      // const content = this.posts.filter(post => post.content.toLowerCase().includes(search))
+      const category = this.posts.filter(post => post.category.name.toLowerCase().includes(search))
 
-      let items = byTitle.concat(byContent).concat(byCategory)
-      return array.uniq(items)
+      let items = title.concat(category)
+      return uniq(items)
     }
   },
   methods: {
