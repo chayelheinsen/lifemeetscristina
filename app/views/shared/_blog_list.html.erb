@@ -2,4 +2,10 @@
 <%= stylesheet_pack_tag 'blog-list', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 <% posts = ActiveModelSerializers::SerializableResource.new(@posts).to_json %>
-<%= tag.div(id: :"blog-list", class: :"blog-list blog-content", data: { posts: posts, show_search: @show_search }) %>
+<%= tag.div(id: :"blog-list", class: :"blog-list blog-content", data: { posts: posts, show_search: @show_search }) do %>
+  <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+<% end %>

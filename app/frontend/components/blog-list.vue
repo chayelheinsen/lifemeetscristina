@@ -13,6 +13,9 @@
     </div>
     <div id='blog-list' class='blog-list blog-content'>
       <BlogItem v-for='post in filteredPosts' :key='post.id' :post='post' class='card'></BlogItem>
+      <div v-if='showNoPostsFound'>
+        <h1 class="font-ultralight color-coral">No posts found</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -38,6 +41,9 @@ export default {
 
       let items = title.concat(category)
       return uniq(items)
+    },
+    showNoPostsFound() {
+      return this.filteredPosts.length == 0
     }
   },
   methods: {

@@ -1,5 +1,5 @@
 import Vue from 'vue/dist/vue.esm'
-import TurbolinksAdapter from '../vue-turbolinks.js'
+import TurbolinksAdapter from 'vue-turbolinks'
 import BlogList from '../components/blog-list.vue'
 
 Vue.use(TurbolinksAdapter)
