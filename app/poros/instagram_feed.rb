@@ -11,7 +11,7 @@ class InstagramFeed
   end
 
   def media
-    if items = response.dig("user", "media", "nodes")
+    if response.respond_to?(:dig) && items = response.dig("user", "media", "nodes")
       Rails.cache.fetch("instagram_feed", expires_in: CACHE_EXPIRATION) do
         items.map { |data| MediaItem.new(data) }
       end
